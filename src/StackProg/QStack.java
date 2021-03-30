@@ -4,10 +4,13 @@ import java.util.Stack;
 
 public class QStack {
 
-    static void pushStack(Stack<Integer> top_ref, int new_data)
+    static int pushStack(Stack<Integer> top_ref, int new_data)
     {
         // Push the data onto the stack
-        top_ref.push(new_data);
+
+         top_ref.push(new_data);
+         return new_data;
+
     }
 
     /* Function to pop an item from stack*/
@@ -59,6 +62,7 @@ public class QStack {
         Queue q = new Queue();
         q.stack1 = new Stack<>();
         q.stack2 = new Stack<>();
+
         enQueue(q, 1);
         enQueue(q, 2);
         enQueue(q, 3);
@@ -83,9 +87,8 @@ public class QStack {
         /*
         Her kan det legges til popStack og pushStack metoder
         */
-   //     System.out.print(popStack() + " --> Pop stack ");
 
-   //     System.out.print(pushStack() + " --> Push stack ");
+        System.out.println(popStack(q.stack1) + " --> Pop stack ");
 
         System.out.print(deQueue(q) + " removed ");
         System.out.print(deQueue(q) + " removed ");
